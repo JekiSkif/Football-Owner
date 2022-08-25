@@ -14,12 +14,24 @@ namespace Football_Owner
     {
         public Form1()
         {
+            
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Play_Click(object sender, EventArgs e)
+        {
+            Play_Form f = new Play_Form();
+            f.Show();
         }
     }
 }
