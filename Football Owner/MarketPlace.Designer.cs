@@ -37,6 +37,7 @@ namespace Football_Owner
             this.Manager = new System.Windows.Forms.Label();
             this.YourTeam = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Finish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GoalKeepers
@@ -123,6 +124,17 @@ namespace Football_Owner
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Finish
+            // 
+            this.Finish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Finish.Location = new System.Drawing.Point(1494, 29);
+            this.Finish.Name = "Finish";
+            this.Finish.Size = new System.Drawing.Size(112, 34);
+            this.Finish.TabIndex = 7;
+            this.Finish.Text = "Finish";
+            this.Finish.UseVisualStyleBackColor = false;
+            this.Finish.Click += new System.EventHandler(this.Finish_Click);
+            // 
             // MarketPlace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -131,6 +143,7 @@ namespace Football_Owner
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1678, 1050);
+            this.Controls.Add(this.Finish);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.YourTeam);
             this.Controls.Add(this.Manager);
@@ -160,5 +173,6 @@ namespace Football_Owner
         private System.Windows.Forms.Label Manager;
         private System.Windows.Forms.Label YourTeam;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Finish;
     }
 }

@@ -21,6 +21,7 @@ namespace Football_Owner
             this._birthday = birthday;
             this._age = 2022 - this._birthday.getYear();
         }
+        public Person() { }
 
         public string getFirstName() { return this._first_name; }
         public string getLastName() { return this._last_name; }

@@ -20,6 +20,11 @@ namespace Football_Owner
             this._vision = vision;
         }
 
+        public MidfilderPlayer(Image img) : base(img)
+        {
+
+        }
+
         public int getPassing()
         {
             return this._passing;

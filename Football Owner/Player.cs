@@ -37,6 +37,7 @@ namespace Football_Owner
 
         }
 
+        public Player(Image img) : base() { this._image_player = img; }
         public int getRating() { return this._rating; }
         public int getValue() { return this._value; }
         public char getFoot() { return this._foot; }
@@ -89,6 +90,11 @@ namespace Football_Owner
         public void draw()
         {
             g.DrawImage(this._image_player, _location.X, _location.Y, PictureSizeOnScreen.Width, PictureSizeOnScreen.Height);
+        }
+
+        public void draw_choose()
+        {
+            g.DrawRectangle(new Pen(Color.Green), this._location.X, this._location.Y, 90, 90);
         }
         public bool Inside(int x, int y) 
         {

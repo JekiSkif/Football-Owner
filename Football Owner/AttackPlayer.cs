@@ -23,6 +23,10 @@ namespace Football_Owner
             this._speed = speed;
         }
 
+        public AttackPlayer(Image img) : base(img)
+        {
+
+        }
         public int getShooting() { return this._shooting; }
         public int getDribble() { return this._dribble; }
         public int getSpeed() { return this._speed; }

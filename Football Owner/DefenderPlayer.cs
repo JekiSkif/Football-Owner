@@ -21,6 +21,10 @@ namespace Football_Owner
             this._physicality = physicality;
         }
 
+        public DefenderPlayer(Image img) : base(img)
+        {
+
+        }
         public int getTackle()
         {
             return this._tackle;

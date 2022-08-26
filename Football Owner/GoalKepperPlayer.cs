@@ -21,6 +21,13 @@ namespace Football_Owner
             this._jumping = jumping;
         }
 
+        public GoalKepperPlayer(Image img):base(img)
+        {
+            
+        }
+
+
+
         public int getCatchBall()
         {
             return _catchBall;
