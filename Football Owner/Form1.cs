@@ -33,5 +33,11 @@ namespace Football_Owner
             Play_Form f = new Play_Form();
             f.Show();
         }
+
+        private void Instructions_Click(object sender, EventArgs e)
+        {
+            Instructions P = new Instructions();
+            P.Show();
+        }
     }
 }

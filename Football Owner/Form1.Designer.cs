@@ -37,9 +37,10 @@ namespace Football_Owner
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(420, 124);
+            this.Play.Location = new System.Drawing.Point(336, 99);
+            this.Play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(332, 63);
+            this.Play.Size = new System.Drawing.Size(266, 50);
             this.Play.TabIndex = 0;
             this.Play.Text = "Play";
             this.Play.UseVisualStyleBackColor = true;
@@ -47,18 +48,21 @@ namespace Football_Owner
             // 
             // Instructions
             // 
-            this.Instructions.Location = new System.Drawing.Point(420, 239);
+            this.Instructions.Location = new System.Drawing.Point(336, 191);
+            this.Instructions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Instructions.Name = "Instructions";
-            this.Instructions.Size = new System.Drawing.Size(332, 63);
+            this.Instructions.Size = new System.Drawing.Size(266, 50);
             this.Instructions.TabIndex = 1;
             this.Instructions.Text = "Instructions";
             this.Instructions.UseVisualStyleBackColor = true;
+            this.Instructions.Click += new System.EventHandler(this.Instructions_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(420, 351);
+            this.Exit.Location = new System.Drawing.Point(336, 281);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(332, 63);
+            this.Exit.Size = new System.Drawing.Size(266, 50);
             this.Exit.TabIndex = 2;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
@@ -66,15 +70,16 @@ namespace Football_Owner
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1141, 652);
+            this.ClientSize = new System.Drawing.Size(913, 522);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Instructions);
             this.Controls.Add(this.Play);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Football Owner";
             this.Load += new System.EventHandler(this.Form1_Load);
