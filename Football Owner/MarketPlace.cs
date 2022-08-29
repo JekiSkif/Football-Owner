@@ -76,6 +76,10 @@ namespace Football_Owner
             }
         }
 
+        private void MarketPlace_DragDrop(object sender, DragEventArgs e)
+        {
+            MessageBox.Show("AAA");
+        }
     }
 
 }

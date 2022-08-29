@@ -38,6 +38,10 @@ namespace Football_Owner
             this.YourTeam = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Finish = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GoalKeepers
@@ -135,6 +139,22 @@ namespace Football_Owner
             this.Finish.UseVisualStyleBackColor = false;
             this.Finish.Click += new System.EventHandler(this.Finish_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 75);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(1401, 601);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // MarketPlace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -143,6 +163,8 @@ namespace Football_Owner
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1678, 1050);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Finish);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.YourTeam);
@@ -158,7 +180,10 @@ namespace Football_Owner
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MarketPlace_Load);
             this.Click += new System.EventHandler(this.MarketPlace_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MarketPlace_DragDrop);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MarketPlace_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +199,7 @@ namespace Football_Owner
         private System.Windows.Forms.Label YourTeam;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Finish;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
