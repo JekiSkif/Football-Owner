@@ -17,7 +17,7 @@ namespace Football_Owner
         int[] _tempX;
         int[] _tempY;
         static int SIZE = 7;
-        static int SIZE_TEAM = 4;
+        public static int SIZE_TEAM = 4;
 
        public Market()
         {

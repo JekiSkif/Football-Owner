@@ -22,6 +22,8 @@ namespace Football_Owner
             g = this.CreateGraphics();
             Player.SetGraphics(g);
             m = new Market();
+            this.Controls.Remove(Finish);
+
         }
         private void MarketPlace_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,8 @@ namespace Football_Owner
             m.insertMidfilders();
             m.insertAttackers();
             enable_click_on_market = true;
+            this.Controls.Add(Finish);
+            
         }
 
         private void MarketPlace_MouseClick(object sender, MouseEventArgs e)
@@ -54,6 +58,7 @@ namespace Football_Owner
 
         private void Finish_Click(object sender, EventArgs e)
         {
+            int x = 440, i;
             string message = "Are you sure this is your selected team? ";
             string title = "Continue";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -67,7 +72,15 @@ namespace Football_Owner
                     _finish_click = true;
                     Game gm = new Game();
                     gm.Show();
-                    this.Close();
+                    for (i = 0; i < Market.SIZE_TEAM; i++)
+                    {
+                        Market._my_team[i].SetY(30);
+                        Market._my_team[i].SetX(x);
+                        Market._my_team[i].draw();
+                        x += 100;
+                    }
+                   // this.Close();
+
                 }
                 else
                 {
@@ -75,11 +88,5 @@ namespace Football_Owner
                 }
             }
         }
-
-        private void MarketPlace_DragDrop(object sender, DragEventArgs e)
-        {
-            MessageBox.Show("AAA");
-        }
     }
-
 }

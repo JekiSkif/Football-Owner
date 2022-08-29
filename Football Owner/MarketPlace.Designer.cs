@@ -38,10 +38,14 @@ namespace Football_Owner
             this.YourTeam = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Finish = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.DEFdrag = new System.Windows.Forms.PictureBox();
+            this.GKdrag = new System.Windows.Forms.PictureBox();
+            this.MIDdrag = new System.Windows.Forms.PictureBox();
+            this.ATTdrag = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DEFdrag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GKdrag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MIDdrag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATTdrag)).BeginInit();
             this.SuspendLayout();
             // 
             // GoalKeepers
@@ -139,21 +143,57 @@ namespace Football_Owner
             this.Finish.UseVisualStyleBackColor = false;
             this.Finish.Click += new System.EventHandler(this.Finish_Click);
             // 
-            // pictureBox1
+            // DEFdrag
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 75);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.DEFdrag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DEFdrag.Enabled = false;
+            this.DEFdrag.Image = ((System.Drawing.Image)(resources.GetObject("DEFdrag.Image")));
+            this.DEFdrag.Location = new System.Drawing.Point(1530, 310);
+            this.DEFdrag.Name = "DEFdrag";
+            this.DEFdrag.Size = new System.Drawing.Size(90, 90);
+            this.DEFdrag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DEFdrag.TabIndex = 8;
+            this.DEFdrag.TabStop = false;
+            this.DEFdrag.Visible = false;
             // 
-            // pictureBox2
+            // GKdrag
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1401, 601);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.GKdrag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GKdrag.Enabled = false;
+            this.GKdrag.Image = ((System.Drawing.Image)(resources.GetObject("GKdrag.Image")));
+            this.GKdrag.Location = new System.Drawing.Point(1530, 210);
+            this.GKdrag.Name = "GKdrag";
+            this.GKdrag.Size = new System.Drawing.Size(90, 90);
+            this.GKdrag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GKdrag.TabIndex = 9;
+            this.GKdrag.TabStop = false;
+            this.GKdrag.Visible = false;
+            // 
+            // MIDdrag
+            // 
+            this.MIDdrag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MIDdrag.Enabled = false;
+            this.MIDdrag.Image = ((System.Drawing.Image)(resources.GetObject("MIDdrag.Image")));
+            this.MIDdrag.Location = new System.Drawing.Point(1530, 410);
+            this.MIDdrag.Name = "MIDdrag";
+            this.MIDdrag.Size = new System.Drawing.Size(90, 90);
+            this.MIDdrag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MIDdrag.TabIndex = 10;
+            this.MIDdrag.TabStop = false;
+            this.MIDdrag.Visible = false;
+            // 
+            // ATTdrag
+            // 
+            this.ATTdrag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ATTdrag.Enabled = false;
+            this.ATTdrag.Image = ((System.Drawing.Image)(resources.GetObject("ATTdrag.Image")));
+            this.ATTdrag.Location = new System.Drawing.Point(1530, 510);
+            this.ATTdrag.Name = "ATTdrag";
+            this.ATTdrag.Size = new System.Drawing.Size(90, 90);
+            this.ATTdrag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ATTdrag.TabIndex = 11;
+            this.ATTdrag.TabStop = false;
+            this.ATTdrag.Visible = false;
             // 
             // MarketPlace
             // 
@@ -163,8 +203,10 @@ namespace Football_Owner
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1678, 1050);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ATTdrag);
+            this.Controls.Add(this.MIDdrag);
+            this.Controls.Add(this.GKdrag);
+            this.Controls.Add(this.DEFdrag);
             this.Controls.Add(this.Finish);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.YourTeam);
@@ -180,10 +222,11 @@ namespace Football_Owner
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MarketPlace_Load);
             this.Click += new System.EventHandler(this.MarketPlace_Load);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MarketPlace_DragDrop);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MarketPlace_MouseClick);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEFdrag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GKdrag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MIDdrag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATTdrag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +242,9 @@ namespace Football_Owner
         private System.Windows.Forms.Label YourTeam;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Finish;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox DEFdrag;
+        private System.Windows.Forms.PictureBox GKdrag;
+        private System.Windows.Forms.PictureBox MIDdrag;
+        private System.Windows.Forms.PictureBox ATTdrag;
     }
 }
