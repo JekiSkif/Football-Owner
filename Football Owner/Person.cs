@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Media;
 
 namespace Football_Owner
 {
@@ -34,7 +35,7 @@ namespace Football_Owner
         public void setGender(char gender) { this._gender = gender; }
         public void setAge(int age ) { this._age = age; }
         public void setDate(Date birthday) { this._birthday = birthday; }
-        public abstract void special_ability();
+        public abstract void special_ability(SoundPlayer sp);
     }
    
 }

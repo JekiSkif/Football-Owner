@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Football_Owner
 {
@@ -14,16 +15,16 @@ namespace Football_Owner
 
         public AttackPlayer(string first_name, string last_name, char gender
             ,  Date birthday, int rating, int value, char foot,
-            int salary, string football_club, int seniority, int height, int weight,Image im,int shooting, int dribble, int speed) : base(first_name,last_name, gender
+            int salary, string football_club, int seniority, int height, int weight,Image im,Image detailsImage, int shooting, int dribble, int speed) : base(first_name,last_name, gender
             ,    birthday,  rating, value, foot,
-             salary,  football_club,  seniority,  height,  weight,im)
+             salary,  football_club,  seniority,  height,  weight,im, detailsImage)
         {
             this._shooting = shooting;
             this._dribble = dribble;
             this._speed = speed;
         }
 
-        public AttackPlayer(Image img) : base(img)
+        public AttackPlayer(Image img, Image detailsImage) : base(img, detailsImage)
         {
 
         }
@@ -36,9 +37,10 @@ namespace Football_Owner
         public void setSpeed(int speed) { this._speed = speed; }
 
 
-        public override void special_ability()
+        public override void special_ability(SoundPlayer sp)
         {
-            MessageBox.Show("Goal");
+            sp = new SoundPlayer("Goal!.wav");
+            sp.Play();
         }
         public string dataAttackPlayer()
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Football_Owner
 {
@@ -13,15 +14,15 @@ namespace Football_Owner
         private int _physicality;
         public DefenderPlayer(string first_name, string last_name, char gender
             ,  Date birthday, int rating, int value, char foot,
-            int salary, string football_club, int seniority, int height, int weight,Image im, int tackle, int physicality) : base(first_name, last_name, gender
+            int salary, string football_club, int seniority, int height, int weight,Image im,Image detailsImage, int tackle, int physicality) : base(first_name, last_name, gender
             ,  birthday, rating, value, foot,
-             salary, football_club, seniority, height, weight,im)
+             salary, football_club, seniority, height, weight,im, detailsImage)
         {
             this._tackle = tackle;
             this._physicality = physicality;
         }
 
-        public DefenderPlayer(Image img) : base(img)
+        public DefenderPlayer(Image img, Image detailsImage) : base(img, detailsImage)
         {
 
         }
@@ -49,9 +50,10 @@ namespace Football_Owner
 
         }
 
-        public override void special_ability()
+        public override void special_ability(SoundPlayer sp)
         {
-            MessageBox.Show("Great Tackle !!");
+            sp = new SoundPlayer("defenceSong.wav");
+            sp.Play();
         }
     }
 }

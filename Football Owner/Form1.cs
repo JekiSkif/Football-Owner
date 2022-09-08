@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Football_Owner
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            MaximizeBox = false;
+            MinimizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
+            
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -30,8 +33,23 @@ namespace Football_Owner
 
         private void Play_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Play_Form f = new Play_Form();
             f.Show();
+            
+        }
+
+        private void Instructions_Click(object sender, EventArgs e)
+        {
+            Instructions i = new Instructions();
+            i.Show();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+/*            var processes = Process.GetProcessesByName("Football Owner");
+            foreach (var process in processes)
+                process.Kill();*/
         }
     }
 }
